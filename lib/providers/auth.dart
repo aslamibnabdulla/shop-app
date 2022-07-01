@@ -54,7 +54,7 @@ class Auth with ChangeNotifier {
       ),
     );
 
-    print(_token);
+    // print(_token);
     notifyListeners();
     final prefs = await SharedPreferences.getInstance();
     final userData = json.encode({
@@ -82,9 +82,9 @@ class Auth with ChangeNotifier {
     _token = extractedData['token'];
     _userId = extractedData['userId'];
     _expiryDate = expiryDate;
-    print(_token);
-    print(_userId);
-    print(_expiryDate);
+    // print(_token);
+    // print(_userId);
+    // print(_expiryDate);
     autoLogOut();
 
     notifyListeners();
